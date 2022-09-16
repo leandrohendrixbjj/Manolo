@@ -8,10 +8,9 @@ class Webservice {
     }
 }
 
-console.log(
-    Webservice.getAdress("03664010")
-        .then((res) => {
-            console.log(
-                res.data
-            );
-        }).catch(err => console.log(err)));
+const data = Webservice.getAdress("03664010");
+
+data.then((adress) => {
+    console.log(adress.data);
+}).catch(err => console.log(err));
+
